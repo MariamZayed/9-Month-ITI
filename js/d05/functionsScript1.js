@@ -23,3 +23,15 @@ let gradeValidation = function(student_grade){
     }
     return student_grade;
 }
+
+let filterStudent = function(){
+    let select_botton = document.querySelector("option:checked").value;
+    let rowCount = document.querySelector("#studentsData").rows.length;
+    
+    if(select_botton == "all"){
+        for(let i=1;i=rowCount;i++){
+            let students_arr = document.querySelector(`#studentsData td:nth-child(${i})`).innerText;
+            console.log(students_arr);
+        }
+    }       
+}
