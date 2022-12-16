@@ -36,7 +36,6 @@ window.addEventListener("load",function(){
         let department_value = document.querySelector("input[name=Department]:checked").value;
         tr_obj.classList.add(department_value);
 
-
-
+        filterStudent();
     }
 });
