@@ -17,7 +17,7 @@ let nameValidation = function(student_name){
 let gradeValidation = function(student_grade){
     //check if grade between 0:100
     let num = Number(student_grade);
-    // console.log(typeof(num));
+
     if(num<0 || num>100){
         console.log("please enter grade between 0 and 100");
     }
@@ -26,12 +26,17 @@ let gradeValidation = function(student_grade){
 
 let filterStudent = function(){
     let select_botton = document.querySelector("option:checked").value;
-    let rowCount = document.querySelector("#studentsData").rows.length;
+    let row_count = document.querySelector("#studentsData").rows.length;
     
     if(select_botton == "all"){
-        for(let i=1;i=rowCount;i++){
-            let students_arr = document.querySelector(`#studentsData td:nth-child(${i})`).innerText;
-            console.log(students_arr);
+        for(let i=0;i<row_count;i++){
+            let student_record = document.querySelector(`#studentsData tr:nth-child(${i+1})`).innerText;
+                let pra = document.createAttribute("p");
+                let pla = document.querySelector("body");
+
+            // pra.innerText = student_record;
+            // pla.append(pra);
+            
         }
     }       
 }
