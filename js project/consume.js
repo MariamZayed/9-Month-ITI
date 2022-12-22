@@ -1,3 +1,13 @@
+let bg_img = document.createElement("img");
+document.body.style.cssText = "background-image: url('images/garden2.webp'); background-size: cover; background-repeat:no-repeat;"
+
+let counter_box = document.querySelector("counter");
+counter_box.innerText = 0;
+
+let score_box = document.querySelector("score");
+score_box.innerText = 0;
+
+setGameTimer();
 
 let birds_obj = {
     obj1 : new WhiteBird(),
@@ -16,4 +26,6 @@ setTimeout(function(){
         clearInterval(birds_obj[key].id);
         birds_obj[key].bird_obj.style.display = "none";
     }
-},5000);
+    clearInterval(id);
+},60000);
+

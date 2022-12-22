@@ -1,4 +1,6 @@
 class Bird{
+    static #counter=1;
+    static #Score=0;
     constructor(){
         this.position={};
         this.position.left=0;
@@ -8,7 +10,7 @@ class Bird{
         this.bird_obj.style.left = this.position.left+"%";
         this.bird_obj.style.top = this.position.top+"%";
 
-        this.bird_obj.addEventListener("click",()=>{this.hitBird()});
+        // this.bird_obj.addEventListener("click",()=>{this.hitBird()});
     }
 
     move(secs){
@@ -31,9 +33,8 @@ class Bird{
         this.position.top=Math.floor(Math.random()*85);
         this.bird_obj.style.left = this.position.left+"%";
         this.bird_obj.style.top = this.position.top+"%";
+        counter_box.innerText = `${Bird.#counter++}`;
     }
-
-
 }
 
 class WhiteBird extends Bird{
@@ -47,6 +48,10 @@ class WhiteBird extends Bird{
         this.bird_obj.style.height = this.height+"%";
 
         document.body.append(this.bird_obj);
+
+        this.bird_obj.addEventListener("click",()=>{
+            this.hitBird();
+        });
     }
 
     
@@ -105,10 +110,25 @@ class Bomb{
 }
 
 let timedBomb = function(){
-    let id = setTimeout(function(){
+    id = setInterval(function(){
         bomb_obj.bomb_obj.style.display="inline-block";
         bomb_obj.move();
-        timedBomb();
-    },20000);
+    },10000);
 }
 
+let setGameTimer = function(){
+    let time_txt = document.querySelector(".timer");
+    document.body.append(time_txt);
+
+    time_txt.innerText = "60";
+    let i =59;
+    let id = setInterval(function(){
+        if(i!=-1){
+            time_txt.innerText = `${i}`;
+            i--;
+        }
+        else{
+            clearInterval(id);
+        }
+    },1000)
+}
