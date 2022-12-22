@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+    body{
+        background-image: url('images/garden2.jpg');
+        background-size:cover;
+        background-repeat:no-repeat;
+    }
+    .hidden{
+    display: none;
+    }
+    .infoMessage,.instruc{
+    opacity: 0.8;
+    margin: auto;
+    width: 40%;
+    height: 40vh;
+    background-color: #eee;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+    box-shadow: 1px 0px 20px 20px #3a383885;
+    color: rgb(132, 132, 189);
+    }
+    .infoMessage .imgs{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .infoMessage .imgs img{
+        width: 25%;
+    }
+    .infoMessage button{
+        width: 20%;
+        height: 10%;
+        background-color: rgb(67, 67, 240);
+        border: none;
+        color: white;
+        font-weight: bolder;
+        border-radius: 25px;
+    }
+    h1{
+    padding: 0;
+    margin: 0;
+    }
+    input{
+        border: none;
+        width: 40%;
+        height: 10%;
+        text-align: center;
+        border-radius: 10px;
+    }
+    .instruc{
+        align-items: flex-start;
+        margin-top: 80px;
+        font-size: large;
+    }
+    .instruc .points{
+        width: 60%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .instruc img{
+        width: 30%;
+    }
+
+    .redImg{
+        width: 30% !important;
+    }
+    .cyan{
+        color: red;
+    }
+    .white{
+        color:  blue;
+    }
+    .black{
+        color:orange;
+    }
+
+    h3{
+        position: absolute;
+        color: red;
+        text-align: center;
+        transform: rotateY('45deg');
+        top: 43%;
+        left: 37%;
+    }
+</style>
+</head>
+<body>
+    <div class="infoMessage">
+        <h1>Enter Your Name</h1>
+        <input type="text" name="playerName" placeholder="Enter Your Name">
+        <p class="hidden"></p>
+        <button class="startButton">Start</button>
+    </div>
+
+    <div class="instruc">
+        <div class="points">
+            <img src="images/white.gif" >
+            <h1 class="white">+5 points</h1>
+        </div>
+        <div class="points">
+            <img src="images/black.gif" >
+            <h1 class="black">+10 points</h1>
+        </div>
+        <div class="points">
+            <img class="redImg" src="images/cyan.gif">
+            <h1 class="red">-5 points</h1>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

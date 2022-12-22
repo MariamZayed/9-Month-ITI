@@ -3,11 +3,6 @@ let score_box = document.querySelector(".score");
 let time_txt = document.querySelector(".timer");
 let name_box = document.querySelector(".name");
 name_box.innerText = window.localStorage.getItem('player_name');
-let againButton = document.querySelectorAll(".againButton");
-let homeButtons = document.querySelectorAll(".home");
-let startMessage = document.querySelector(".startMessage");
-let win_msg = document.querySelector(".win_msg");
-let lose_msg = document.querySelector(".lose_msg");
 
 setGameTimer();
 

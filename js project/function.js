@@ -171,7 +171,7 @@ let timedBomb = function(){
     id = setInterval(function(){
         bomb_obj.bomb_obj.style.display="inline-block";
         bomb_obj.move();
-    },10000);
+    },20000);
 }
 
 let setGameTimer = function(){
