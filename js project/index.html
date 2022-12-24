@@ -7,33 +7,38 @@
         background-size:cover;
         background-repeat:no-repeat;
     }
+    
+    .warning{
+        text-align: center;
+        color: red;
+    }
     .hidden{
-    display: none;
+        display: none;
     }
-    .infoMessage,.instruc{
-    opacity: 0.8;
-    margin: auto;
-    width: 40%;
-    height: 40vh;
-    background-color: #eee;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    padding: 10px;
-    box-shadow: 1px 0px 20px 20px #3a383885;
-    color: rgb(132, 132, 189);
+    .info_msg,.guide{
+        opacity: 0.8;
+        margin: auto;
+        width: 40%;
+        height: 40vh;
+        background-color: #eee;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 10px;
+        box-shadow: 1px 0px 20px 20px #3a383885;
+        color: rgb(132, 132, 189);
     }
-    .infoMessage .imgs{
+    .info_msg .imgs{
         width: 100%;
         display: flex;
         justify-content: center;
     }
-    .infoMessage .imgs img{
+    .info_msg .imgs img{
         width: 25%;
     }
-    .infoMessage button{
+    .info_msg button{
         width: 20%;
         height: 10%;
         background-color: rgb(67, 67, 240);
@@ -43,8 +48,8 @@
         border-radius: 25px;
     }
     h1{
-    padding: 0;
-    margin: 0;
+        padding: 0;
+        margin: 0;
     }
     input{
         border: none;
@@ -53,21 +58,20 @@
         text-align: center;
         border-radius: 10px;
     }
-    .instruc{
+    .guide{
         align-items: flex-start;
         margin-top: 80px;
         font-size: large;
     }
-    .instruc .points{
+    .guide .points{
         width: 60%;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
     }
-    .instruc img{
-        width: 30%;
+    .guide img{
+        width: 40%;
     }
-
     .redImg{
         width: 30% !important;
     }
@@ -80,26 +84,18 @@
     .black{
         color:orange;
     }
-
-    h3{
-        position: absolute;
-        color: red;
-        text-align: center;
-        transform: rotateY('45deg');
-        top: 43%;
-        left: 37%;
-    }
 </style>
 </head>
 <body>
-    <div class="infoMessage">
+
+    <div class="info_msg">
         <h1>Enter Your Name</h1>
-        <input type="text" name="playerName" placeholder="Enter Your Name">
+        <input type="text" name="player_Name" placeholder="Enter Your Name">
         <p class="hidden"></p>
-        <button class="startButton">Start</button>
+        <button class="start_button">Start</button>
     </div>
 
-    <div class="instruc">
+    <div class="guide">
         <div class="points">
             <img src="images/white.gif" >
             <h1 class="white">+5 points</h1>
