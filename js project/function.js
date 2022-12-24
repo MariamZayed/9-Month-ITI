@@ -10,8 +10,7 @@ class Bird{
         this.bird_obj.style.left = this.position.left+"%";
         this.bird_obj.style.top = this.position.top+"%";
 
-        // this.bird_obj.addEventListener("click",()=>{this.hitBird()});
-
+        //to make different score to each bird in their own classes
         if(new.target.name === "WhiteBird") {
             this.class_name ="WhiteBird";
         }
@@ -23,21 +22,24 @@ class Bird{
         }
     }
 
+    // make birds actaully move
     move(secs){
-        setTimeout(()=>{this.id = setInterval(()=>{
-            if((this.position.left+1)<(100-this.width))
-                this.position.left+=1;
-            else{
-                this.position.left=0;
-                this.position.top=Math.floor(Math.random()*85);
-                this.bird_obj.style.left = this.position.left+"%";
-                this.bird_obj.style.top = this.position.top+"%";
-            }
-            this.bird_obj.style.left=this.position.left+"%";
-
-        },50)},secs);
+        setTimeout(()=>{
+            this.id = setInterval(()=>{
+                if((this.position.left+1)<(100-this.width))
+                    this.position.left+=1;
+                else{
+                    this.position.left=0;
+                    this.position.top=Math.floor(Math.random()*85);
+                    this.bird_obj.style.left = this.position.left+"%";
+                    this.bird_obj.style.top = this.position.top+"%";
+                }
+                this.bird_obj.style.left=this.position.left+"%";
+            },50)//every ,005 sec check if bird hit end or not
+        },secs)// how fast bird will move
     }
 
+    // hit bird either by mouse or bomb
     hitBird(){
         this.position.left=0;
         this.position.top=Math.floor(Math.random()*85);
@@ -47,15 +49,15 @@ class Bird{
 
         if(this.class_name =="WhiteBird") {
             Bird.#Score=Bird.#Score+5;
-            score_box.innerText = `Birds Killed: ${Bird.#Score}`;
+            score_box.innerText = `Score: ${Bird.#Score}`;
         }
         else if(this.class_name =="CyanBird") {
             Bird.#Score=Bird.#Score-5;
-            score_box.innerText = `Birds Killed: ${Bird.#Score}`;
+            score_box.innerText = `Score: ${Bird.#Score}`;
         }
         else if(this.class_name =="BlackBird") {
             Bird.#Score=Bird.#Score+10;
-            score_box.innerText = `Birds Killed: ${Bird.#Score}`;
+            score_box.innerText = `Score: ${Bird.#Score}`;
         }
         
     }
@@ -115,7 +117,6 @@ class BlackBird extends Bird{
     }
 }
 
-
 class Bomb{
     constructor(){
         this.position={};
@@ -167,6 +168,7 @@ class Bomb{
         }
 }
 
+// make bomb appear each 20 secs
 let timedBomb = function(){
     id = setInterval(function(){
         bomb_obj.bomb_obj.style.display="inline-block";
@@ -174,17 +176,15 @@ let timedBomb = function(){
     },20000);
 }
 
+// make 60 secs timer
 let setGameTimer = function(){
     time_txt.innerText = 60;
-    
     let i =59;
     let id = setInterval(function(){
         if(i!=-1){
             time_txt.innerText = `Time: ${i}`;
             i--;
         }
-        else{
-            clearInterval(id);
-        }
+        else{clearInterval(id);}
     },1000)
 }
