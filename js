@@ -1,1 +1,0 @@
-/home/mariam/Desktop/js
