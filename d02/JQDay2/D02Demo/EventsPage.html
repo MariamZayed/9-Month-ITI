@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="JS/jquery-3.5.1.js"></script>
+    <script src="JS/Events.js"></script>
+    <style>
+        .active,
+        p {
+            background-color: yellow;
+        }
+        .clicked{
+            background-color: cyan;
+        }
+        .small {
+            background-color: azure;
+            width: 300px;
+            margin: 10px;
+        }
+
+        .error {
+            border: 1px solid red;
+        }
+    </style>
+   
+
+
+
+</head>
+
+<body>
+    <button id="btncreate">CreatenewPara</button>
+    <button id="btnMove">MovePar</button>
+    <form id="form1" runat="server">
+        <div>
+            <ul>
+                <li>Bind</li>
+                <li>Bind More than one Event to One Fun</li>
+                <li>Bind More than one Event to more Function</li>
+                <li>Passing Event Object</li>
+                <li>UnBind</li>
+                <li>CLick</li>
+            </ul>
+            <h1>Clicked on event</h1>
+            <input type="button" id="animated" value="Animation">
+            <input type="button" id="Sliding" value="Slide" />
+            <input type="button" id="Fading" value="Fading" />
+            <select name="Skills" multiple="multiple">
+                <option>JavaScript</option>
+                <option selected="selected">JQuery</option>
+                <option>ASP.net</option>
+                <option selected="selected">CSS</option>
+                <option>HTML5</option>
+                <option>PHP</option>
+            </select>
+            <span></span>
+            <div id="example">
+                Div 1.
+                <p>Click Mee</p>
+            </div>
+
+            <div class="small">
+                Div 2.
+            </div>
+            <div class="small">
+                Div 3.
+            </div>
+            <div class="small">
+                Div 4.
+            </div>
+         
+            <input type="text" value="Enter Your Name"  id='txtName'/>
+            <span id="sp" style="color: red;"></span>
+            <input type="button" value="Cancel Click" />
+            <input id="EOW" type="button" value="End Of The World" />
+            <input id="three" type="button" value="3" />
+            <input id="whichkey" type="text" value="" /><span id="log"></span>
+
+            <table id="dataTable">
+                <tbody>
+                    <tr>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>B</td>
+                    </tr>
+                    <tr>
+                        <td>C</td>
+                    </tr>
+                    <tr>
+                        <td>D</td>
+                    </tr>
+                </tbody>
+            </table>
+            <input type="checkbox" />Agree
+            <a href="http://www.google.com">Google</a>
+            <input type="button" id="b1" value="Button 1" />
+            <input type="button" id="b2" value="Button 2" />
+
+        </div>
+    </form>
+
+    <p><input type="text"> <span>focusin fire</span></p>
+    <p><input type="password"> <span>focusin fire</span></p>
+</body>
+
+</html>
