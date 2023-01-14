@@ -1,31 +1,21 @@
-// $(function(){
-//     $("#json").on("click",function(){
-//         $.ajax({
-//             type: "get",
-//             url: "../Data/DataObject.json",
-//             success:function(res){
-//                 debugger;
-//                 $('#json').text('');
-//                 for(let line in res){
-//                     for(let obj in line)
-//                         $('textarea').text($('textarea').text()+obj+' : '+line[obj]+'\n');
-//                     $('textarea').text($('textarea').text()+'\n')
-//                 }
-//             }
-//         }); 
-//     })
-// })
-// $('button#JSON').on("click",function(){
-//     $.ajax({
-//         url: "json.json",
-//         type:"get",
-//         success:function(res){
-//             $('#container').zyz('');
-//             for(let line of res){
-//                 for(let obj in line)
-//                     $('#container').text($('#container').text()+obj+' : '+line[obj]+'\n');
-//                 $('#container').text($('#container').text()+'\n')
-//             }
-//         }
-//     });
-// })
+$(function(){
+    $("#json").on("click",function(){
+        $.ajax({
+            type: "get",
+            url: "../Data/DataObject.json",
+            success:function(res){
+                // console.log(res.registers.length);
+                // console.log(res.registers[0]);
+                // $('textarea').text(res.registers[0]);
+                for(let obj in res){    
+                    let record = '';
+                    for(let i=0;i<res[obj].length;i++){
+                        record = record +  i+' : '+res[obj][i].userName+" " +res[obj][i].password+'\n'; 
+                    }
+                    $('textarea').text(record);
+
+                }   
+            }
+        }); 
+    })
+})
