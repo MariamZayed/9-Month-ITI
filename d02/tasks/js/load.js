@@ -18,4 +18,16 @@ $(function(){
             }
         }); 
     })
+
+    $('#xml').on("click",function(){
+        $.ajax({
+            type: "get",
+            url: "../Data/Documents.xml",
+            success: function (res) {
+                // convert xml to string
+                let xml_string = (new XMLSerializer()).serializeToString(res);
+                $('textarea').text(test);
+            }  
+        });
+    })
 })

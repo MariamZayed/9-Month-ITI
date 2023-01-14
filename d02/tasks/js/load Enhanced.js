@@ -4,9 +4,9 @@ $(function(){
             type: "get",
             url: "../Data/complecatedData.json",
             success:function(res){
-                let idea = JSON.stringify(res);
+                //convert json tor text
+                let json_string = JSON.stringify(res);
                 $('textarea').text(idea);
-
             }
         }); 
     })
