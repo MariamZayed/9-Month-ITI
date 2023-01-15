@@ -7,10 +7,77 @@
     <title>Document</title>
     <script src="../jquery-3.5.1.js"></script>
     <script src="../js/addEmp.js"></script>
+    <style>
+        * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                color: #333;
+                font-family: sans-serif;
+            }
+
+            #container {
+                width: 500px;
+                margin: 0 auto;
+                padding: 30px 0;
+                
+            }
+
+            p {
+                margin-bottom: 10px;
+            }
+            button {
+                display: block;
+                width: 100%;
+                border: 1px solid #ccc;
+                padding: 10px;
+                margin: 15px 0;
+                cursor: pointer;
+            }
+
+            article {
+                border: 1px solid #ccc;
+                padding: 15px;
+                margin: 10px 0;
+            }
+            
+            label {
+                margin-right: 10px;
+            }
+            div:nth-child(3) {
+                border:#ccc 2px solid;
+            }
+    </style>
 </head>
 <body>
-    <form>
-        
-    </form>
+    <section id="container">
+        <form>
+            <div style="margin: 15px auto; padding-bottom: 15px;"></div>
+
+            <div class="art">
+                <p>Add New Employee</p>
+            </div>
+            <div>
+                <label>ID: </label>
+                <input type="text" name="id" /><br>
+
+                <label>Name: </label>
+                <input type="text" name="name" /><br>
+
+                <label>Age: </label>
+                <input type="text" name="age" /><br>
+
+                <label>Salary: </label>
+                <input type="text" name="salary" /><br>
+            </div>
+            <div>
+                <button type="submit">Add Employee</button>
+            </div>
+        </form>
+    </section>
+    
 </body>
 </html>
