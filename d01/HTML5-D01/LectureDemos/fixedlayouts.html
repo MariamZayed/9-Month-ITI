@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Fixed Layout</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        #mainwrapper{
+            width:1000px;
+            border:2px solid black;
+            margin:10px auto;
+            padding:5px;
+        }
+        #mainheader,#mainfooter{
+            border:1px solid black;
+            padding:10px;
+            text-align:center;
+            background-color:lightgray;
+        }
+        #mainnav{
+            border:1px solid black;
+            padding:10px;
+            background-color:blue;
+        }
+        li{
+            list-style:none;
+            color:white;
+            display:inline-block;
+            width:100px;
+        }
+        li:hover{
+            cursor:pointer;
+            color:yellow;
+        }
+        #mainsection{
+            padding:10px;
+            border:1px solid black;
+            margin-top:5px;
+            width:600px;
+            /*display:inline-block;   */
+            float:left;
+            margin-bottom:10px;
+        }
+        article{
+            border:1px solid black;
+            margin:10px;
+        }
+        #mainaside {
+            padding: 10px;
+            border: 1px solid black;
+            margin-top: 5px;
+            width:300px;
+            /*display:inline-block;*/
+            float:right;
+
+        }
+        #mainaside>p:nth-child(odd){
+            border:1px solid black;
+            padding:5px;
+            margin:10px;
+            background-color:lightyellow;
+        }
+            #mainaside > p:nth-child(even) {
+                border: 1px solid black;
+                padding: 5px;
+                margin: 10px;
+                background-color: lightgray;
+            }
+        #mainfooter{
+            
+            clear:both;
+        }
+    </style>
+</head>
+<body>
+    <div id="mainwrapper">
+        <header id="mainheader">
+            <h3>OS Mansoura Track</h3>
+        </header>
+        <nav id="mainnav">
+            <ul>
+                <li>Home</li>
+                <li>Contact</li>
+                <li>About</li>
+            </ul>
+        </nav>
+        <section id="mainsection">
+            <article>
+                <header>
+                    <h5>Article One header</h5>
+                </header>
+                <p>Article One Body</p>
+                <footer>CopyRights &copy; resecred to author one </footer>
+            </article>
+            <article>
+                <header>
+                    <h5>Article Two header</h5>
+                </header>
+                <p>Article Two Body</p>
+                <footer>CopyRights &copy; resecred to author two </footer>
+            </article>
+        </section>
+        <aside id="mainaside">
+            <p>Mansoura</p>
+            <p>Ismailia</p>
+            <p>Smart</p>
+        </aside>
+        <footer id="mainfooter">
+            <p>CopyRights &copy; Reserved to Open Source Track.</p>
+        </footer>
+    </div>
+</body>
+</html>

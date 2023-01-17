@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        section{
+            width:800px;
+            
+            /*border:2px solid black;*/
+            margin:100px auto;
+            padding:10px;
+            text-align:center;
+            
+            /*transform:skew(45deg);*/
+        }
+        img{
+            width:150px;
+            height:150px;
+            margin:20px;
+            border-radius:50%;
+            opacity:0.5;
+            transform:rotate(-10deg);
+          /*  transition:transform 2s , opacity 2s;*/
+          transition:all 2s;
+        }
+        img:hover{
+            transform:rotate(0deg) scale(1.2);
+            opacity:1;
+            cursor:pointer;
+        }
+        img:active {
+            transform: rotate(360deg) scale(0.7)
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <!--ITI Mansoura-->
+        <img src="UP/1.jpg" />
+        <img src="UP/1.jpg" />
+        <img src="UP/1.jpg" />
+    </section>
+</body>
+</html>

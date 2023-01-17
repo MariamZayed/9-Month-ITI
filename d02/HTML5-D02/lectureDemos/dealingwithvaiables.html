@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        section{
+            border:2px solid black;
+            width:500px;
+            margin:20px;
+        }
+        p{
+            border:2px solid black;
+            padding:10px;
+            margin:10px;
+        }
+       :root {
+            --basecolor: red;
+            --baseborder:2px dashed var(--basecolor);
+        }
+        #sectionone{
+            border-color:var(--basecolor);
+            
+        }
+            #sectionone > p:nth-child(1) {
+                color: var(--basecolor);
+            }
+        #sectiontwo > p:nth-child(1) {
+            background-color: var(--basecolor);
+        }
+        #sectiontwo > p:nth-child(2) {
+            border:var(--baseborder);
+        }
+    </style>
+</head>
+<body>
+    <section id="sectionone">
+        <p>P For Section One</p>
+        <p>P For Section One</p>
+    </section>
+    <section id="sectiontwo">
+        <p>P For Section Two</p>
+        <p>P For Section Two</p>
+    </section>
+</body>
+</html>
