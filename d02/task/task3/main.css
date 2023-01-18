@@ -80,12 +80,12 @@ a:visited{
 .main button{
     font-size: 1.5rem;
     padding: .5rem;
-    background-image:linear-gradient(to right, pink,lightyellow);
+    background-color:brown;
     margin-top: 1em;
-    
+    border: 1px #212529 solid;    
 }
 .main button:hover{
-    background-image:linear-gradient(to left, pink,lightyellow);
+    background-color:#ccc;
 }
 .map {
     height: 50vh;

@@ -16,6 +16,8 @@
         " left  right right right right "
         " left  right right right right ";
 }
+
+
 ul {
     list-style-type:none;
 }
@@ -24,16 +26,13 @@ header{
     background-color: lightcoral;
     grid-area: header;
     display: flex;
-    /* align-items: center; */
 }
 header > ul {
     list-style-type: none;
     display: flex;
     align-items: center;
     flex-direction: row;
-    /* justify-content: space-around; */
-    /* justify-content: space-between; */
-    /* padding-top:11px ; */
+
     color:white;
     width: 100%;
     padding: 10px;
@@ -44,6 +43,8 @@ header li {
 li:hover {
     background-color: #ccc;
 }
+
+
 
 #right {
     grid-area: right;
@@ -61,6 +62,8 @@ li:hover {
 #right img:hover{
     opacity: 1;
 }
+
+
 
 #left {
     grid-area: left;
@@ -101,6 +104,11 @@ li:hover {
 #left h4,h5 {
     margin: 10px 0;
 }
-
+a > i {
+    padding:10px ;
+}
+a > i:hover{
+    background-color: #ccc;
+}
 
 
