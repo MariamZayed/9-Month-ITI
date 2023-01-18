@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="https://kit.fontawesome.com/aec6678ae5.js" crossorigin="anonymous"></script>
+    <title></title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            transition: all 1s;
+        }
+        .container{
+            width: 98.2vw;
+        }
+        .nav ul{
+            background-color: rgb(211, 200, 142);
+            color: white;
+            height: 10vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            color: black;
+            text-align: center;
+        }
+        .nav ul>li{
+            list-style: none;
+        }
+        .nav ul>li>a{
+            padding: .5rem;
+            text-decoration: none;
+            color: black;
+            font:  1.3rem Arial;
+        }
+        .nav ul>li>a:hover{
+            color: rgb(211, 200, 142);
+            background-color: rgb(108, 126, 11);
+            border-radius: 5px;
+        }
+        a:visited{
+            color: black;
+        }
+        #logo{
+            font: bold 2rem Helvetica;
+        }
+        #logo:hover{
+            text-decoration: underline;
+        }
+        .main{
+            
+            background-image: url(images/laptop_top.jpg);
+            background-size: cover;
+            background-position: center;
+            /* width: 100vm; */
+            height: 90vh;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            
+
+        }
+        .main p{
+            font-size: 3rem;
+        }
+        .main button{
+            font-size: 1.5rem;
+            padding: .5rem;
+            background-image:linear-gradient(to right, pink,lightyellow);
+            margin-top: 1em;
+            
+        }
+        .main button:hover{
+            background-image:linear-gradient(to left, pink,lightyellow);
+        }
+        .footer{
+            background-color: #212529;
+            padding: 3rem;
+            color: white;
+            height: 25vh;
+            display: flex;
+            flex-direction: row;
+            justify-content:flex-end;
+            align-items: center;
+        }
+        .footer div{
+            /* width: 100%; */
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* align-items: center; */
+            margin: 0 3rem;
+        }
+        .footer p{
+            font-size: 1.3rem;
+        }
+        .footer div:first-child>ul{
+            display: flex;
+            flex-direction: column;
+            color: gray;
+        }
+        .footer img{
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            margin: 1rem 0;
+        }
+        .footer ul{
+            list-style: none;
+        }
+        .footer div:last-child>ul{
+            /* width:20%; */
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            
+        }
+        .map {
+            height: 50vh;
+            padding: 1em;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .map .left{
+            height: 100%;
+            width: 40%;
+        }
+        .left img{
+            width: 100%;
+            height: 100%;
+        }
+        .map .right{
+            height: 100%;
+            width: 40%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            
+        }
+        .right span{
+            width: 40%;
+            height: 15%;
+            vertical-align: middle;
+            
+            padding: .5em;
+            background-color: rgb(223, 218, 218);
+            /* height:30%; */
+            border: 1px solid black;
+            
+        }
+        .mainBranch{
+         color : brown;
+        }
+        .hidden{
+            opacity: .4;
+        }
+        #icons{
+            height: 15vmin;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            text-align: center;
+        }
+        #icons i{
+            /* flex-grow: 1; */
+            flex-basis: 100%;
+            
+        }
+        #icons a,#icons a:visited,#icons a:hover{
+            color: gray;
+        }
+    </style>
+    <script>
+
+        window.addEventListener("load",function(){
+            document.querySelector("input[type='checkbox'][name='mainCheck']").addEventListener('click',function(){
+                // debugger;
+                let spans = document.querySelector('.mainBranch').classList.toggle('hidden')
+                spans.forEach(span => {
+                    span.classList.toggle('hidden')
+                });
+            })
+            document.querySelector("input[type='checkbox'][name='secCheck']").addEventListener('click',function(){
+                let spans = document.querySelectorAll('.right span:not(.mainBranch)')
+                spans.forEach(span => {
+                    span.classList.toggle('hidden')
+                });
+            })
+
+            // document.querySelector("input[type='checkbox'][name='mainCheck']").addEventListener('click',function(){
+                
+            //     let spans = document.querySelector('.mainBranch').classList.toggle('hidden')
+            //     spans.forEach(span => {
+            //         span.classList.toggle('hidden')
+            //     });
+            // })
+            // if()
+            
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <ul>
+                <li><a href="#">student</a></li>
+                <li><a href="#">Classes</a></li>
+                <li id="logo">OS Mansura</li>
+                <li><a href="#">Dish Parties</a></li>
+                <li><a href="#">Groups</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <p>Information Technology Institue</p>
+            <p>Register</p>
+            <button>Apply Now</button>
+        </div>
+        <div class="map">
+            <div class="left">
+                <img src="images/map.jpg" alt="">
+            </div>
+            <div class="right">
+                <span class="mainBranch">ITI - Smart Village</span>
+                <span>ITI - Assuit</span>
+                <span>ITI - Alexandria</span>
+                <span>ITI - Mansoura</span>
+                <span>ITI - Cairo</span>
+                <span>ITI - Assuit</span>
+                <span>ITI - Alexandria</span>
+                <span>ITI - Mansoura</span>
+                
+                
+
+                <div>
+                    <input type="checkbox" name="mainCheck" checked /> Main Branches
+                    <input type="checkbox" name="secCheck" checked /> Branches
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div>
+                <p>Contact Us</p>
+                <ul>
+                    
+                    <li>28 Km by Cairo / Alexandria Desert Road, 6 October, B148, Egypt</li>
+                    <li>(+202) 353-55656</li>
+                    <li>ITIinfo@iti.gov.eg</li>
+
+                </ul>
+            </div>
+            <div>
+                <p>FOLLOW US</p>
+                <div id="icons">
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <!-- <ul >
+                    <li><img src="images/1.jpg"></li>
+                    <li><img src="images/1.jpg"></li>
+                    <li><img src="images/1.jpg"></li>
+                </ul> -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
