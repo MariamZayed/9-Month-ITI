@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/font-awesome.css" rel="stylesheet" />
+    <style>
+        body {
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <label for="validationCustomUsername" class="form-label">Username</label>
+            <div class="input-group has-validation">
+                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                <div class="invalid-feedback">
+                Please choose a username.
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="userpass">userpass</label>
+                <input type="password" id="userpass" class="form-control" />
+            </div>
+
+            <label for="validationCustom04" class="form-label">Facalty</label>
+            <select class="form-select" id="validationCustom04" required>
+                <optgroup label="MansouraUniversity">
+                    <option>Engineering</option>
+                    <option>Education</option>
+                    <option>Commerce</option>
+                </optgroup>
+                <optgroup label="CairoUniversity">
+                    <option>Engineering</option>
+                    <option>Education</option>
+                    <option>Commerce</option>
+                </optgroup>
+            </select>
+            <div class="invalid-feedback">
+                Please select a valid state.
+            </div>
+
+            <div class="input-group mt-2">
+                <span class="input-group-prepend input-group-text fa fa-user"></span><input type="text" class="form-control" />
+            </div>
+            
+            <div class="input-group mt-2">
+                <span class="input-group-prepend input-group-text fa fa-lock"></span><input type="password" class="form-control" />
+            </div>
+        </form>
+    </div>
+
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <script src="js/JQuery-3.3.1.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>
