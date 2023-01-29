@@ -12,7 +12,7 @@ class task2 {
         System.out.println("the word is: "+str);
     }
     public static void main(String[] args) {
-        String word = "hellojava";
+        String word = "hello java";
         traverseString(word);
     }
 

@@ -22,7 +22,7 @@ class BallGame extends JPanel {
                     }
                     if(y <= 0){
                         isMovingUp = false;
-                    }else if(y + 50 >= BallGame.this.getParent().getHeight()){
+                    }else if(y + 30 >= BallGame.this.getParent().getHeight()){
                         isMovingUp = true;
                     }
                     x += getHorizontalSpeed();
