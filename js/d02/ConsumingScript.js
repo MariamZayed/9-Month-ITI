@@ -2,7 +2,7 @@
 
 // console.log(value1);
 
-// let result = printVariables(3,5);
+let result = printVariables(3,5);
 
 // let result = printVariables(10,20,30,40,50,60);
 
