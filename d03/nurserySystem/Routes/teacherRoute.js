@@ -7,7 +7,7 @@ const validationUpdateArray = require("../Core/validations/teacherValidation/val
 
 router
     .route("/teachers")
-    .get(validationArray,validateMW, controller.getAllteachers)
+    .get(controller.getAllteachers)
     .post(validationArray,validateMW,controller.addteacher)
     .patch(validationUpdateArray,validateMW,controller.updateteacher)
     .delete(controller.deleteteacher);//need id ?

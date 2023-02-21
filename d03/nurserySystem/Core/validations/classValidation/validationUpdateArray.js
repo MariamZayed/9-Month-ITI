@@ -1,23 +1,26 @@
-const { body, param, query } = require("express-validator");
+    const { body, param, query } = require("express-validator");
 
-module.exports = [
-    body("id").optional().isInt().withMessage("class Id should be integer"),
-    body("fullName")
-        .optional()
-        .isAlpha()
-        .withMessage("fullName should be string")
-        .isLength({ max: 10 })
-        .withMessage("class name <10"),
-    body("level")
-        .optional()
-        .isIn(["PREKG", "KG1", "KG2"])
-        .withMessage("You should select one of existed levels"),
-    body("age")
-        .optional()
-        .isInt()
-        .withMessage("Age should be Number"),
-    body("address").optional().isObject().withMessage("Invalid address"),
-        body("address.city").optional().isString().withMessage("Invalid city"),
-        body("address.street").optional().isString().withMessage("Invalid street"),
-        body("address.bulding").optional().isNumeric().withMessage("Invalid bulding")
-];
+    module.exports = [
+        body("id")
+            .optional()
+            .isInt()
+            .withMessage("id should be integer"),
+        body("fullname")
+            .optional()
+            .isAlpha()
+            .withMessage("name should be string")
+            .isLength({ max: 10 })
+            .withMessage("name <10"),
+        body("supervisor")
+            .optional()
+            .isNumeric()
+            .withMessage("Enter a valid supervisor ref"),
+        body("children")
+            .optional()
+            .isArray()
+            .withMessage("Enter an array of children"),
+        body("children.*")
+            .optional()
+            .isInt()
+            .withMessage("Invalid children Ids")
+    ];

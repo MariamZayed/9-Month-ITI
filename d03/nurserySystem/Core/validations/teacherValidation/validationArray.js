@@ -1,7 +1,9 @@
 const { body, param, query } = require("express-validator");
 
 module.exports = [
-    body("id").isInt().withMessage("teacher Id should be integer"),
+    body("id")
+        .isInt()
+        .withMessage("teacher Id should be integer"),
     body("fullName")
         .isAlpha()
         .withMessage("fullName should be string")
@@ -13,5 +15,4 @@ module.exports = [
     body("image")
         .isAlpha()
         .withMessage("image should be string")
-
 ];

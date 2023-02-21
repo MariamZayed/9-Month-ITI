@@ -7,8 +7,8 @@ const validationUpdateArray = require("../Core/validations/classValidation/valid
 
 router
     .route("/classes")
-    .get(validationArray,controller.getAllClasses)
-    .post(validationArray,controller.addClass)
+    .get(controller.getAllClasses)
+    .post(validationArray,validateMW,controller.addClass)
     .patch(validationUpdateArray,validateMW,controller.updateClass)
     .delete(controller.deleteClass);//need id ?
 

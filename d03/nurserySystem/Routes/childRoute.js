@@ -7,7 +7,7 @@ const validationUpdateArray = require("../Core/validations/childValidation/valid
 
 router
     .route("/childern")
-    .get(validationArray,controller.getAllChildern)
+    .get(controller.getAllChildern)
     .post(validationArray,validateMW,controller.addchild)
     .patch(validationUpdateArray,validateMW,controller.updatechild)
     .delete(controller.deletechild);
