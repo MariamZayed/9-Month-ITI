@@ -16,20 +16,20 @@ exports.getAllteachers=(request,response)=>{
 
 exports.addteacher=(request,response,next)=>{
     new teachreSchema({
-        id:request.body.id,
+        _id: new mongoose.Types.ObjectId(),
         fullName:request.body.fullName,
         email:request.body.email,
-        image:request.body.email,
-    })  .save()// insertOne
-        .then(data=>{
-            response.status(201).json({data});
-        })
-        .catch(error=>next(error));
+        image:request.body.image,
+    }).save()// insertOne
+    .then(data=>{
+        response.status(201).json({data});
+    })
+    .catch(error=>next(error));
 }
 
 exports.updateteacher=(request,response,next)=>{
     teachreSchema.updateOne({
-        id:request.body.id
+        _id:request.body.id
     },{
         $set:{
             fullName:request.body.fullName,
@@ -47,7 +47,7 @@ exports.updateteacher=(request,response,next)=>{
 
 exports.deleteteacher=(request,response,next)=>{
     teachreSchema.deleteOne({
-        id:request.body.id
+        _id:request.body.id
     }).then(data=>{
         response.status(200).json({data});
     })

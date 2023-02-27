@@ -1,16 +1,15 @@
 const express = require("express");
 const router = express.Router();
-const validateMW = require("./../Core/validations/validateMW");
 const controller = require("./../Controller/classController");
-const validationArray = require("../Core/validations/classValidation/validationArray");
-const validationUpdateArray = require("../Core/validations/classValidation/validationUpdateArray");
+const validateMW = require("./../Core/validations/validateMW");
+const classValidation = require("../Core/validations/classValidation");
 
 router
     .route("/classes")
-    .get(validationArray,controller.getAllClasses)
-    .post(validationArray,controller.addClass)
-    .patch(validationUpdateArray,validateMW,controller.updateClass)
-    .delete(controller.deleteClass);//need id ?
+    .get(controller.getAllClasses)
+    .post(classValidation.post,validateMW,controller.addClass)
+    .patch(classValidation.update,validateMW,controller.updateClass)
+    .delete(classValidation.delete,validateMW,controller.deleteClass);
 
 
 module.exports = router;

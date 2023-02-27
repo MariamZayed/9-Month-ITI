@@ -1,17 +1,14 @@
 const express = require("express");
 const router = express.Router();
-const validateMW = require("./../Core/validations/validateMW");
 const controller = require("./../Controller/teacherController");
-const validationArray = require("../Core/validations/teacherValidation/validationArray");
-const validationUpdateArray = require("../Core/validations/teacherValidation/validationUpdateArray");
+const validateMW = require("./../Core/validations/validateMW");
+const teacherValidation = require("../Core/validations/teacherValidation");
 
 router
     .route("/teachers")
     .get(controller.getAllteachers)
-    .post(validationArray,validateMW,controller.addteacher)
-    .patch(validationUpdateArray,validateMW,controller.updateteacher)
-    .delete(controller.deleteteacher);//need id ?
-
-
+    .post(teacherValidation.post,validateMW,controller.addteacher)
+    .patch(teacherValidation.update,validateMW,controller.updateteacher)
+    .delete(teacherValidation.delete,validateMW,controller.deleteteacher);
 
 module.exports = router;

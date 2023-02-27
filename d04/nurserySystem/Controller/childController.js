@@ -39,7 +39,7 @@ exports.updateChild=(request,response,next)=>{
         }
     }).then((data) => {
         if(data.matchedCount == 0)
-            new Error("Not Found")
+            throw new Error("Not Found")
         else
             response.status(200).json(data);
     })
@@ -48,7 +48,7 @@ exports.updateChild=(request,response,next)=>{
 
 exports.deleteChild=(request,response,next)=>{
     childernSchema.deleteOne({
-        id: request.body.id
+        _id: request.body.id
     }).then((data) =>{
         if(data.deletedCount == 0)
             new Error("Not Found")

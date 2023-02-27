@@ -2,13 +2,12 @@ const express = require("express");
 const router = express.Router();
 const controller = require("../Controller/childController");
 const validateMW = require("../Core/validations/validateMW");
-const validationArray = require("../Core/validations/childValidation/validationArray");
-const validationUpdateArray = require("../Core/validations/childValidation/validationUpdateArray");
+const childValidation = require("../Core/validations/childValidation");
 
-router.route("/child")
+router.route("/childern")
     .get(controller.getAllChildern)
-    .post(validationArray,validateMW,controller.addChild)
-    .patch(validationUpdateArray,validateMW,controller.updateChild)
-    .delete(controller.deleteChild);
+    .post(childValidation.post,validateMW,controller.addChild)
+    .patch(childValidation.update,validateMW,controller.updateChild)
+    .delete(childValidation.delete,validateMW,controller.deleteChild);
 
 module.exports = router;

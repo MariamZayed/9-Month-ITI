@@ -2,7 +2,7 @@ const mongoose=require("mongoose");
 
 // Create Schema object
 const schema=new mongoose.Schema({
-    _id:Number,
+    _id:mongoose.Schema.Types.ObjectId,
     fullName:String,
     email:String,
     image:String
