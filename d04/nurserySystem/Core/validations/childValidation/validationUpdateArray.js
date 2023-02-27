@@ -6,7 +6,7 @@ module.exports = [
         .optional()
         .isAlpha()
         .withMessage("fullName should be string")
-        .isLength({ max: 10 })
+        .isLength({ max: 30 })
         .withMessage("child name <10"),
     body("level")
         .optional()
@@ -16,13 +16,9 @@ module.exports = [
         .optional()
         .isInt()
         .withMessage("Age should be Number"),
-    body("address")
-        .optional()
-        .isObject()
-        .withMessage("Invalid address"),
-        body("address.city").optional().isString().withMessage("Invalid city"),
-        body("address.street").optional().isString().withMessage("Invalid street"),
-        body("address.building").optional().isNumeric().withMessage("Invalid bulding")
+    body("address.city").optional().isString().withMessage("Invalid city"),
+    body("address.street").optional().isString().withMessage("Invalid street"),
+    body("address.building").optional().isNumeric().withMessage("Invalid bulding")
 
 
 ];

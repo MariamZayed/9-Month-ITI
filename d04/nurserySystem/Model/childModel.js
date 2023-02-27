@@ -4,7 +4,7 @@ const AutoIncrement = require('mongoose-sequence')(mongoose);
 const schema = new mongoose.Schema({
     _id: Number,
     fullName: String,
-    age: { type: Number, min: 6, max: 10 },
+    age: { type: Number, min: 2, max: 11 },
     level: { type: String, enum: ["PREKG", "KG1", "KG2"] },
     address: {
         city: String,

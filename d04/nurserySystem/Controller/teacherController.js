@@ -44,7 +44,8 @@ exports.updateteacher=(request,response,next)=>{
     })
     .catch(error=>next(error));
 }
-exports.deleteteacher=(request,response)=>{
+
+exports.deleteteacher=(request,response,next)=>{
     teachreSchema.deleteOne({
         id:request.body.id
     }).then(data=>{

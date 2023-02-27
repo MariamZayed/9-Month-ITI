@@ -4,7 +4,7 @@ module.exports = [
     body("fullName")
         .isAlpha()
         .withMessage("fullName should be string")
-        .isLength({ max: 10 })
+        .isLength({ max: 30 })
         .withMessage("child name < 10"),
     body("level")
         .isIn(["PREKG", "KG1", "KG2"])

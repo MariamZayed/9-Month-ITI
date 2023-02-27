@@ -12,7 +12,7 @@ exports.getAllChildern=(request,response,next)=>{
 
 exports.addChild=(request,response,next)=>{
     new childernSchema({
-        name: request.body.name,
+        fullName: request.body.fullName,
         age: request.body.age,
         level: request.body.level,
         address:{
@@ -29,15 +29,14 @@ exports.addChild=(request,response,next)=>{
 
 exports.updateChild=(request,response,next)=>{
     childernSchema.updateOne({
-        id: request.body.id,
-    },
-    {
+        _id: request.body.id,
+    },{
         $set: {
-            name: request.body.name,
+            fullName: request.body.fullName,
             age: request.body.age,
             level: request.body.level,
-            //address: request.body.address,
-        },
+            address: request.body.address
+        }
     }).then((data) => {
         if(data.matchedCount == 0)
             new Error("Not Found")
