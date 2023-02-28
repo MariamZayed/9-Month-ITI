@@ -4,8 +4,12 @@ const AutoIncrement = require('mongoose-sequence')(mongoose);
 const schema = new mongoose.Schema({
     _id: Number,
     name: String,
-    supervisor: { type: Number,ref: "teachers"},
-    children: [{ type: Number, ref: "child" }],
+    supervisor: {
+        type: mongoose.Schema.Types.ObjectId, ref: "teacher"
+    },
+    children: [{
+        type: Number, ref: "child"
+    }],
 });
 
 schema.plugin(AutoIncrement,{
@@ -13,4 +17,4 @@ schema.plugin(AutoIncrement,{
     inc_field: "_id"
 });
 
-mongoose.model("childern", schema);
+mongoose.model("classes", schema);
