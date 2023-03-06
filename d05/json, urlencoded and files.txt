@@ -1,0 +1,7 @@
+json and urlencoded doesn;t accept binary data(files)
+to send file use form-data tab in post man
+---------no files------
+json-> row data body
+urlencoded-> x-www-form
+------files------
+files->form-data
