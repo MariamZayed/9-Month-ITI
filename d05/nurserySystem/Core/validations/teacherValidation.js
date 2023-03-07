@@ -1,5 +1,5 @@
 const { body, param, query } = require("express-validator");
-شعار 
+ 
 exports.post = [
     body("fullName").isString().withMessage("Full Name must be string"),
     body("email").isEmail().withMessage("Email Invalid Format"),
