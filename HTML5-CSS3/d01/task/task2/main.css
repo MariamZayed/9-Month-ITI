@@ -1,0 +1,46 @@
+@keyframes corners {
+        0%{
+            left:0;
+            top:0;
+            background-color: rgb(255, 171, 171);
+        }
+        25%{
+            top:0;
+            left: 300px;
+            background-color: rgb(161, 161, 245);
+        }
+        50%{
+            left: 300px;
+            top: 300px;
+            background-color: green;
+        }
+        75%{
+            left: 0;
+            top: 300px;
+            background-color: rgb(241, 241, 173);
+        }
+        100%{
+            left: 0;
+            top: 0;
+            background-color: rgb(255, 184, 184);
+        }
+    }
+    section {
+        width: 150px;
+        height: 150px;
+        background-color: cyan;
+        border: 1px solid lightcyan;
+        margin: 20px;
+        position: relative;
+    }
+    .moving{
+        animation: corners 4s infinite;
+    }
+    button{
+        padding: 10px;
+        margin: 10px;
+        background-color: cyan;
+        border: 1px solid cyan(46, 170, 149);
+        border-radius: 20%;
+        float: right;
+    }

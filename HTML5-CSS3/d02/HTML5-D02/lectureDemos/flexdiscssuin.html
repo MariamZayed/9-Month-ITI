@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing:border-box;
+        }
+        section{
+            border:1px solid black;
+        }
+        .mainwrapper{
+            width:100vw;
+            height:80vh;
+            display:flex;
+            flex-direction:row;
+            flex-wrap:wrap;
+            /*align-items:center;
+            justify-content:space-around;*/
+            /*align-items:center; */
+        }
+        .box{
+            width:200px;
+            height:100px;
+            /*flex-shrink:0;*/
+        }
+        .box1{
+            background-color:red;
+            /*order:2;*/
+        }
+        .box2 {
+            background-color: yellow;
+            /*align-self:center;*/
+            /*flex-shrink: 0;
+            flex-grow: 1;
+            flex-basis:300px;*/
+            /*flex:1 0 300px;*/
+            /*flex-grow: 2;*/
+            /*order: 1;*/
+        }
+        .box3 {
+            background-color: lightgreen;
+            /*flex-grow: 1;*/
+            /*align-self:flex-end;*/
+            /*order: 4;*/
+        }
+        .box4 {
+            background-color: blue;
+            /*order: 3;*/
+        }
+    </style>
+</head>
+<body>
+    <section class="mainwrapper">
+        <section class="box box1">One</section>
+        <section class="box box2">Two</section>
+        <section class="box box3">Three</section>
+        <section class="box box4">Four</section>
+    </section>
+</body>
+</html>

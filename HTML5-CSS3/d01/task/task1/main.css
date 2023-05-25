@@ -1,0 +1,117 @@
+.containerstyle {
+    width: 30%;
+    height: 30%;
+}
+
+.imagestyle {
+    width: 60%;
+    height: 60%;
+}
+/*javascript styling*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#container{
+    width: 80%;
+    height: 500px;
+    margin: 5% auto;
+    display: -webkit-box;
+    transition: transform 2s;   
+    border: rgb(238, 197, 15) 3px solid;
+    border-radius: 25px;
+    box-shadow: 5px 5px 20px 10px #944380;
+    background-image: radial-gradient(circle,white,cyan);
+}
+#container:hover {
+    transform: skew(15deg);
+}
+
+#text{
+    width: 35%;
+    height: 450px;
+    margin: 1.5%;
+    padding: 10px;
+    column-count: 3;
+    column-rule: 3px solid red;
+    overflow-x:scroll;
+    border: rgb(0, 0, 0) 3px solid;
+    border-radius: 25px;
+    background-image: radial-gradient(white,rgb(92, 226, 14));
+}
+
+#img{
+    width: 60%;
+    height: 450px;
+    margin: 1.5%;
+    border: 3px solid red;
+    overflow: auto;
+    text-align: center;
+    border: blue 3px solid;
+    border-radius: 25px;
+    background-image: radial-gradient(white,cyan);
+}
+img {
+    width: 100px;
+    height: 20%;
+    padding:1%;
+    margin: 1%;
+    transition: transform 2s;
+    border: blue 2px solid;
+
+
+}
+img:hover{
+    transform: scale(1.5);
+}
+img:active{
+    transform: scale(4);
+}
+
+#container:active{
+    transform: scale(.5);
+}
+
+mark {
+    background-color: rgb(255, 0, 0);
+}
+mark:hover {
+    background-image: linear-gradient(red, yellow);
+}
+mark:active {
+    background-image: linear-gradient(blue, white);
+    font-size:17px
+}
+
+p:hover {
+    text-decoration: underline;
+}
+
+/* Portriate Section */
+@media all and (max-width: 500px) {
+    img {
+    transform: rotate(10deg);
+    display: block;
+    text-align: center;
+    margin-left: 30%;
+    }
+    img:hover{
+        transform: scale(1.2),rotate(0deg);
+        border-style:dashed ;
+
+    }
+    #container{
+        transform: none;
+        width: 90%;
+        box-shadow:cyan 10px 10px 10px;
+    }
+    #text{
+        column-rule: none;
+    }
+}
+
+
+

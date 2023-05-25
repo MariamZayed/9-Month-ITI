@@ -1,0 +1,196 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all 1s;
+    color:#fff;
+    font: tahoma;
+}
+
+
+.container{
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.nav ul{
+    height: 4.8rem;
+    font-family: Poppins,sans-serif;
+    font-size: 1.4rem;
+    line-height: 1.68rem;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: .025rem;
+    word-spacing: 0rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #212529;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    justify-content: space-evenly;
+
+
+}
+.nav ul>li{
+    list-style: none;
+}
+.nav ul>li>a{
+    padding: .5rem;
+    text-decoration: none;
+    color: #fff;
+    font:  1.3rem Arial;
+}
+.nav ul>li>a:hover{
+    color: rgb(99, 99, 99);
+    background-color: #ccc
+}
+a:visited{
+    color: black;
+}
+#logo{
+    font: bold 1.5rem ;
+}
+#logo:hover{
+    text-decoration: underline;
+}
+
+
+.main{
+    
+    background-image: url(images/laptop_top.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+
+}
+.main p{
+    font-size: 3rem;
+}
+.main button{
+    font-size: 1.5rem;
+    padding: .5rem;
+    background-color:brown;
+    margin-top: 1em;
+    border: 1px #212529 solid;    
+}
+.main button:hover{
+    background-color:#ccc;
+}
+.map {
+    height: 50vh;
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.map .left{
+    height: 100%;
+    width: 40%;
+}
+.left img{
+    height: 100%;
+    margin-left:15% ;
+}
+
+.map .right{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+.right span{
+    width: 40%;
+    height: 15%;
+    vertical-align: middle;
+    padding: .5em;
+    background-color: rgb(223, 218, 218);
+    border: 1px solid black;
+    color: #212529;
+    
+}
+.mainBranch{
+    color : brown;  
+}
+.test {
+    color: #212529;
+}
+.hidden{
+    opacity: .4;
+}
+
+
+
+.footer{
+    background-color: #212529;
+    padding-right: 20rem;
+    color: white;
+    height: 25vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 13vh;
+}
+.footer div{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 3rem;
+}
+.footer p{
+    font-size: 1.3rem;
+}
+.footer div:first-child>ul{
+    display: flex;
+    flex-direction: column;
+    color: gray;
+}
+.footer img{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    margin: 1rem 0;
+}
+.footer ul{
+    list-style: none;
+}
+.footer div:last-child>ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+
+#icons{
+    height: 15vmin;
+    display: flex;
+    flex-direction: row;
+    justify-concolor: #212529;tent: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+#icons i{
+    /* flex-grow: 1; */
+    flex-basis: 100%;
+    
+}
+#icons a,#icons a:visited,#icons a:hover{
+    color: gray;
+}
