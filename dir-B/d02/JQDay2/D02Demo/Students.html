@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        table {
+            border: 1px solid yellow;
+            color: green;
+            background-color: lightcyan;
+            text-align: center;
+        }
+    </style>
+    <script src="JS/jquery-3.5.1.js"></script>
+    <script src="JS/Ajax.js"></script>
+</head>
+
+<body>
+    <button id="dtText">Loading data from text</button>
+    <button id="dtJson">Loading data from Json</button>
+    <button id="dtXMl">Loading data from xml</button>
+    <button id="dtJSONP">Loading data from JSON</button>
+    <button id="dtJSONPPost">Post data from JSON</button>
+    <div style="width: 300px;height: 200px;background-color: aqua;" id="dataContent">
+
+    </div>
+    <table id="_tbl">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+    </table>
+    <button id="Remove">Delete</button>
+    <button id="GetData">LoadingData</button>
+    <button id="Showing">Show Adding Form</button>
+    <div style="display: none;" id="addForm">
+        <span>Name</span> <input id="txtName" />
+        <span>Age</span> <input id="txtage" />
+        <span>ID</span> <input id="txtid" />
+        <button id="SavingAdd">Save</button>
+    </div>
+
+</body>
+
+</html>

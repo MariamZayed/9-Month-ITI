@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <title>TigerMove</title>
+    <script src="JS/jquery-3.5.1.js"></script>
+    <script>
+        function moveRight() {
+            $("#anim").css({ transform: "rotateY(180deg)" });
+
+
+            $("#anim").animate({ marginLeft: '+950px' }, 5500, "swing", moveLeft)
+        }
+        function moveLeft() {
+            $("#anim").css({
+                transform: "rotateY(0deg)"
+            })
+            $("#anim").animate({
+                marginLeft: "-10px"
+            }, 5500, "swing", moveRight)
+
+        };
+
+        // function StartMove() {
+        //     $("#anim").css("transform", "rotateY(180deg)").animate({
+        //         marginTop: '+500',
+        //         opacity: '-0.2'
+        //     }, 5500, "swing", Back)
+
+        // }
+        // function Back() {
+        //     $("#anim").css("transform", "rotateY(0deg)").animate({
+        //         marginTop: '-10px',
+        //         opacity: '+0.9'
+        //     }, 5500, "swing", StartMove)
+
+        // }
+
+
+        // function Move() {
+        //     $("div").animate({
+        //         marginLeft: '+=700px'
+        //     }, 1000, 'swing', MoveDown)
+        // }
+        // function MoveDown() {
+        //     $('div').animate({
+        //         marginBottom: '+=100px'
+        //     }, {
+        //         duration: 1000,
+        //         easing: 'linear',
+        //         complete: MoveLeft
+        //     })
+
+        // }
+  
+    </script>
+</head>
+
+<body>
+    <img src="tiger.gif" id="anim" onclick="moveRight()" width="100" height="100" />
+    <div style="background-color: green;width: 150px;height: 100px;" onclick="Move();"></div>
+
+</body>
+
+</html>

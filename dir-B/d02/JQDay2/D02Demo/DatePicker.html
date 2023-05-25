@@ -1,0 +1,46 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery UI Datepicker - Default functionality</title>
+    <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="JS/jquery-3.5.1.js"></script>
+    <script src="jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $.fn.extend({
+                "changeStyle": function (_v) {
+                    $(this).css({
+                        backgroundColor: _v,
+                        border: '1px solid green',
+                        fontSize: '23px',
+                        color: 'blue'
+                    }).animate({
+                        width: '+=200px',
+                        opacity: '-=0.5'
+                    }, 1000)
+                }
+            })
+            $("#datepicker").datepicker();
+            $("li").changeStyle("yellow");
+        });
+    </script>
+</head>
+
+<body>
+
+    <p>Date: <input type="text" id="datepicker"></p>
+    <ul>
+        <li>HTML</li>
+        <li>HTML</li>
+        <li>HTML</li>
+        <li>JS</li>
+    </ul>
+
+
+
+</body>
+
+</html>
