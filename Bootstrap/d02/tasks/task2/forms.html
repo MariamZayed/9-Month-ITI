@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="../bootstrap-5.2.3-dist/css/bootstrap.css" rel="stylesheet" /> 
+    <link href="../bootstrap-5.2.3-dist/css/font-awesome.css" rel="stylesheet" /> <!--calling for icons-->
+    <style>
+        body {
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form class="needs-validation" novalidate>
+            <div class="col-md-4">
+                <label for="validationCustomUsername" class="form-label">Username</label>
+                <div class="input-group has-validation">
+                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                    <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                    <div class="invalid-feedback">
+                        Please choose a username.
+                    </div>
+                </div>
+            </div><!--end of username-->
+
+            <div class="input-group has-validation mt-2">
+                <div class="col-auto">
+                    <label id="userpass" class="col-form-label pe-2">Password</label>
+                </div>
+                <div class="col-auto">
+                    <input type="password" id="userpass" class="form-control" aria-describedby="passwordHelpInline" required>
+                </div>
+                <div class="col-auto">
+                    <span id="passwordHelpInline" class="form-text ps-2">
+                        Must be 8-20 characters long.
+                    </span>
+                </div>
+            </div><!-- end of password validation-->
+
+            <div class="input-group mt-2">
+                <label for="validationCustom04" class="form-label  pe-4">Facalty</label>
+                <select class="form-select" id="validationCustom04" required>
+                <optgroup label="MansouraUniversity">
+                    <option>Engineering</option>
+                    <option>Education</option>
+                    <option>Commerce</option>
+                </optgroup>
+                <optgroup label="CairoUniversity">
+                    <option>Engineering</option>
+                    <option>Education</option>
+                    <option>Commerce</option>
+                </optgroup>
+                </select>
+                <div class="invalid-feedback">
+                    Please select a valid state.
+                </div> 
+            </div><!-- end of the selection-->
+            
+            <div class="input-group mt-2">
+                <span class="input-group-prepend input-group-text fa fa-user"></span>
+                <input type="text" class="form-control" required/>
+            </div>
+            <div class="input-group mt-2">
+                <span class="input-group-prepend input-group-text fa fa-lock"></span>
+                <input type="password" class="form-control" required/>
+            </div>
+
+            <div class="col-12">
+                <button class="btn btn-primary mt-4" type="submit">Submit form</button>
+            </div> <!-- Submit button-->
+        </form>
+    </div>
+
+    <script src="../bootstrap-5.2.3-dist/js/bootstrap.bundle.js"></script> <!--calling for bootstap part 2-->
+    <script src="main.js"></script> <!--calling for bootstap part 2-->
+</body>
+</html>

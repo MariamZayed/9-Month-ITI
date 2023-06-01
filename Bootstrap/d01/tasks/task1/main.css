@@ -1,0 +1,47 @@
+/* general styling */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header, .section3 {
+    margin: 2vw;
+    padding: 3vw;
+}
+
+/* header styling */
+header {
+    background-color: #ccc;
+    text-align: center;
+}
+.row h2{
+    padding: 1rem;
+    
+}
+
+/* second section styling */
+.section2  p{
+    background-color: rgb(252, 234, 211);
+}
+
+
+/* third section styling */
+.section3{
+    padding: 0%;
+    margin: 0%;
+}
+#part2 {
+    display: inline;
+}
+.part2 >i{
+    display: block;
+    margin-bottom:.7rem ;
+}
+.part2 >p {
+    display: inline-block;
+    margin-top: 2rem;
+}
+.part2 >span {
+    padding-top: .25rem;
+}
