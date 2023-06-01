@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1672825465 source:d:\enas\iti\data structure\lab2\queue linked list\main.cpp
+	<iostream>
+	<string.h>
+
