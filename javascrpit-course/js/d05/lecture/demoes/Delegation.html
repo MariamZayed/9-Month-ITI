@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+           //propagation bubbling --> events
+           //bubbling --> capture
+          let  liClickHnadeler= function(event){
+                        console.log("li",this,event);
+                        // event.stopPropagation();
+                    }
+            window.addEventListener("load",function(){
+
+                //click div
+            document.querySelector("div").addEventListener("click",function(event){
+                console.log("DIV",event.target.localName);
+                
+            });//,{capture:true,once:true});//click on div  //,treu --> capture
+
+
+            //click ul
+             ulObject=document.querySelector("ul"); //bubbling--> stop
+            ulObject.addEventListener("click",function(event){
+                
+
+                //if child
+                if(event.target.localName=="li")
+                console.log("li");
+                else
+                console.log("UL");
+
+
+                // event.stopPropagation();
+                // event.cancelBubble=true;
+            });//ul click
+
+
+
+            // //event li
+            //  liElements=document.querySelectorAll("ul li");
+            //     for(let i =0;i<liElements.length;i++)
+            //     {
+            //         liElements[i].addEventListener("click",liClickHnadeler);
+            //     }
+
+            //     //GUI  --> add li
+                liElement=document.createElement("li");
+                liElement.innerText="NEW";
+            //     liElement.addEventListener("click",liClickHnadeler  );
+                ulObject.append(liElement);
+
+
+            });//load
+    </script>
+    
+    <style>
+        .bPink {
+            background-color: pink;
+        }
+
+        .bGrey {
+            background-color: lightgray;
+        }
+        div{background-color:darkseagreen}
+        ul{background-color:lightpink;border:5px brown solid;height:100px }
+      
+    </style>
+</head>
+<body>
+                                           
+
+    
+    <div>
+        <p>Testing Div</p>
+        <ul>
+            <li> Elm1 </li>
+            <li> Elm2 </li>
+            <li> Elm3 </li>
+            <li> Elm4 </li>
+        </ul>
+        <p>Ending</p>
+    </div>
+
+</body>
+
+
+</html>
