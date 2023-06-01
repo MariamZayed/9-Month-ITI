@@ -1,0 +1,10 @@
+import java.util.function.Function;
+class task3{ 
+	public static void main(String args[]){
+		Function<Double,Double> convertTemprature  = (Double temp) -> {
+														return (1.8 *temp)+32;
+													};
+		Double result = convertTemprature.apply(18.0);
+		System.out.println(result);
+	}
+}
